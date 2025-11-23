@@ -1,0 +1,155 @@
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.product-table thead {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.product-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+}
+
+.product-table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 14px;
+}
+
+.product-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.status-in-stock {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  /* FIX: Prevent text from wrapping inside the status badge */
+  white-space: nowrap;
+}
+
+.status-out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  /* FIX: Prevent text from wrapping inside the status badge */
+  white-space: nowrap;
+}
+
+/* New style for action buttons container */
+.actions-container {
+  display: flex; /* Arrange buttons side-by-side */
+  gap: 4px; /* Space between buttons */
+  white-space: nowrap; /* Prevent buttons from wrapping */
+  min-width: 140px; /* Ensure enough space for two buttons in display mode */
+}
+
+.product-table input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-edit, .btn-delete, .btn-save, .btn-cancel {
+  padding: 6px 12px;
+  margin: 0; /* Remove margin as gap in actions-container handles spacing */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.btn-save {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #218838;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px !important;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .product-table {
+    font-size: 12px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 8px;
+  }
+  
+  .btn-edit, .btn-delete, .btn-save, .btn-cancel {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
